@@ -11,18 +11,18 @@ import {
 import Font from '../components/Font';
 import Logo from '../components/Logo';
 import Main from '../components/Main';
-import SignInForm from '../components/SignInForm';
+import SignUpForm from '../components/SignUpForm ';
 import { GlobalContext } from '../context/GlobalContextProvider';
 import { RootStackParamList } from '../router/Router';
 import Colors from '../utils/Colors';
 import Fonts from '../utils/Fonts';
 import Margins from '../utils/Margins';
 
-interface ISignInProps {
-  navigation: NativeStackNavigationProp<RootStackParamList, 'SignIn'>;
+interface ISignUpProps {
+  navigation: NativeStackNavigationProp<RootStackParamList, 'SignUp'>;
 }
 
-const SignIn = ({ navigation }: ISignInProps) => {
+const SignUp = ({ navigation }: ISignUpProps) => {
   const { strings } = useContext(GlobalContext);
 
   return (
@@ -34,12 +34,12 @@ const SignIn = ({ navigation }: ISignInProps) => {
         <ScrollView keyboardShouldPersistTaps="handled">
           <KeyboardAvoidingView>
             <View>
-              <SignInForm />
+              <SignUpForm />
             </View>
           </KeyboardAvoidingView>
           <TouchableOpacity
-            style={styles.signUp}
-            onPress={() => navigation.navigate('SignUp')}>
+            style={styles.signIn}
+            onPress={() => navigation.goBack()}>
             <Font>Dont have account?</Font>
             <Text
               style={{
@@ -47,7 +47,7 @@ const SignIn = ({ navigation }: ISignInProps) => {
                 fontFamily: Fonts.MONTSERRAT.regular,
                 fontSize: Fonts.SIZES.regular,
               }}>
-              {' '.concat(strings.buttons.signUp)}
+              {' '.concat(strings.buttons.signIn)}
             </Text>
           </TouchableOpacity>
         </ScrollView>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.PRIMARY,
     paddingTop: Margins.MARGINS.statusBar,
   },
-  signUp: {
+  signIn: {
     marginTop: Margins.MARGINS.large * 2,
     justifyContent: 'center',
     alignItems: 'center',
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default SignUp;

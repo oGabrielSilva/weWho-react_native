@@ -9,7 +9,7 @@ interface IFontProps {
   size?: number;
   center?: boolean;
   upper?: boolean;
-  color?: 'danger' | 'normal';
+  color?: 'danger' | 'link' | 'normal';
 }
 
 const Font = ({ type, color, upper, center, size, children }: IFontProps) => {
@@ -21,6 +21,8 @@ const Font = ({ type, color, upper, center, size, children }: IFontProps) => {
       ...(upper ? { textTransform: 'uppercase' } : {}),
       ...(color === 'danger'
         ? { color: Colors.VARIANT }
+        : color === 'link'
+        ? { color: Colors.TEXT_LINK, fontFamily: Fonts.MONTSERRAT.bold }
         : { color: Colors.TEXT }),
     },
   });

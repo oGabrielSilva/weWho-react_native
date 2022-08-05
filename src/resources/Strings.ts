@@ -6,6 +6,8 @@ class Strings {
     buttons: {
       signUp: 'Sign up',
       signIn: 'Sign in',
+      forgotPassword: 'Forgot password?',
+      remember: 'Remember',
     },
     placeholders: {
       password: 'Password',
@@ -16,6 +18,8 @@ class Strings {
     buttons: {
       signUp: 'Cadastrar',
       signIn: 'Entrar',
+      forgotPassword: 'Esqueceu a senha?',
+      remember: 'Lembrar',
     },
     placeholders: {
       password: 'Senha',

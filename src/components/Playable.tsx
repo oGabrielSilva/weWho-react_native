@@ -17,7 +17,7 @@ const Playable = ({ title, background, onPress }: IPlayableProps) => {
       onPress={onPress ? onPress : () => {}}
       style={[style.main, { backgroundColor: background || Colors.VARIANT }]}
       activeOpacity={0.6}>
-      <Font type="title" center size={Fonts.SIZES.regular}>
+      <Font type="title" center size={Fonts.SIZES.regular + 2}>
         {title}
       </Font>
     </TouchableOpacity>

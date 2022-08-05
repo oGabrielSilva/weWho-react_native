@@ -8,7 +8,7 @@ import Margins from '../utils/Margins';
 import Font from './Font';
 import Playable from './Playable';
 
-const SignInForm = () => {
+const SignUpForm = () => {
   const { strings } = useContext(GlobalContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +21,7 @@ const SignInForm = () => {
   return (
     <View style={{ marginTop: Margins.MARGINS.large }}>
       <View style={{ marginBottom: Margins.MARGINS.large }}>
-        <Font type="subTitle">{strings.buttons.signIn}</Font>
+        <Font type="subTitle">{strings.buttons.signUp}</Font>
       </View>
       <View>
         <TextInput
@@ -112,4 +112,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignInForm;
+export default SignUpForm;

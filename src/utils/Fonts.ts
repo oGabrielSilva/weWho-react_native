@@ -17,7 +17,7 @@ class Fonts {
 
   public static SIZES = {
     small: 12,
-    regular: 16,
+    regular: 14,
     subTitle: 22,
     title: 32,
   };
